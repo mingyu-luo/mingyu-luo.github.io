@@ -3,74 +3,808 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Academic Homepage</title>
-  <meta name="description" content="Academic homepage for Your Name: research, publications, teaching, and contact.">
+  <title>Mingyu Luo — Postdoctoral Researcher at UCLA</title>
+  <meta name="description" content="Mingyu Luo (罗明宇) - Postdoctoral researcher at UCLA Department of Ecology and Evolutionary Biology. Research interests: Theoretical Ecology, Ecological Statistics.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="stylesheet" href="styles.css">
-  <!-- No external fonts or blocked CDNs; system fonts only for speed in China -->
+  
+  <style>
+    /* Modern Academic Website Styles */
+    :root {
+      --primary-color: #2c5aa0;
+      --secondary-color: #536878;
+      --text-dark: #1a1a1a;
+      --text-light: #666;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --border-color: #e0e0e0;
+      --link-hover: #1e3a5f;
+      --max-width: 900px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: var(--bg-primary);
+      font-size: 16px;
+      padding-top: 60px; /* Account for fixed nav */
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: var(--bg-secondary);
+      border-bottom: 2px solid var(--border-color);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(248, 249, 250, 0.95);
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-color);
+    }
+
+    /* Header Section */
+    #home {
+      padding-top: 2rem;
+    }
+
+    .header {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      padding: 3rem 0;
+      margin-bottom: 2rem;
+    }
+
+    .header-image {
+      flex: 0 0 200px;
+    }
+
+    .header img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .header-content {
+      flex: 1;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .title {
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .affiliation {
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* Contact Badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .badges a {
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      color: var(--text-dark);
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badges a:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.2);
+    }
+
+    /* Sections */
+    .section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--bg-secondary);
+      font-weight: 600;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+      font-size: 1.05rem;
+    }
+
+    .section p a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .section p a:hover {
+      text-decoration: underline;
+      color: var(--link-hover);
+    }
+
+    /* Research Grid */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .research-card {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    .research-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .research-card h3 {
+      color: var(--text-dark);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .research-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Publications */
+    .pub {
+      background: var(--bg-secondary);
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .pub:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateX(5px);
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .pub-authors {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-authors strong {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .pub-authors sup {
+      font-size: 0.8rem;
+      vertical-align: super;
+    }
+
+    .pub-venue {
+      color: var(--primary-color);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .pub a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .pub a:hover {
+      text-decoration: underline;
+    }
+
+    .pub a::after {
+      content: "↗";
+      font-size: 0.8rem;
+    }
+
+    /* Teaching */
+    .teaching-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .teaching-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .teaching-list li:last-child {
+      border-bottom: none;
+    }
+
+    .course-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.3rem;
+    }
+
+    .course-name {
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .course-term {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .course-details {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Timeline */
+    .timeline-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .timeline-date {
+      flex: 0 0 140px;
+      font-weight: 600;
+      color: var(--primary-color);
+      text-align: right;
+      padding-top: 0.2rem;
+    }
+
+    .timeline-content {
+      flex: 1;
+      position: relative;
+    }
+
+    .timeline-content h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content .institution {
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+
+    .timeline-content .details {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .timeline-content .details a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-content .details a:hover {
+      text-decoration: underline;
+      color: var(--link-hover);
+    }
+
+    /* CV Button */
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .cv-link:hover {
+      background: var(--link-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+    }
+
+    .cv-link::before {
+      content: "📄";
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 4rem;
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      background: var(--bg-secondary);
+    }
+
+    /* Mobile Menu Toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-dark);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 60px;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(248, 249, 250, 0.98);
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        border-bottom: 2px solid var(--border-color);
+        gap: 0.5rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 0.5rem 0;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .header-image {
+        flex: none;
+      }
+
+      .header img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .badges {
+        justify-content: center;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .timeline-date {
+        text-align: left;
+        flex: none;
+      }
+
+      .course-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-dark: #e0e0e0;
+        --text-light: #999;
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2a2a2a;
+        --border-color: #3a3a3a;
+        --primary-color: #5a9fd4;
+      }
+
+      nav {
+        background: rgba(42, 42, 42, 0.95);
+      }
+
+      .nav-links {
+        background: rgba(42, 42, 42, 0.98);
+      }
+
+      .badges a {
+        background: var(--bg-secondary);
+        color: var(--text-dark);
+        border-color: var(--border-color);
+      }
+
+      .research-card,
+      .pub {
+        background: var(--bg-secondary);
+      }
+
+      .header img {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <header class="header" role="banner">
-      <!-- Replace with your own headshot: place a square 512x512 image at assets/headshot.jpg and update the src below -->
-      <img src="assets/favicon.svg" alt="Headshot placeholder">
-      <div>
-        <h1 class="name">Mingyu Luo (罗明宇)</h1>
-        <p class="title">Postdoctoral researcher @ Department of Ecology and Evolutionary Biology, University of California Los Angeles</p>
-        <p class="title">Research Interests: Theoretical Ecology, Ecological Statistics</p>
-        <div class="badges" aria-label="profiles">
-          <!-- Replace # with your actual links -->
-          <a href="#" aria-label="Email">mingyuluoeeb at ucla.edu</a>
-          <a href="#" aria-label="Google Scholar"></a>
-          <a href="#" aria-label="ORCID">ORCID</a>
-          <a href="#" aria-label="GitHub">GitHub</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        </div>
-      </div>
-    </header>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">Mingyu Luo</a>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" onclick="setActive(this)">Home</a></li>
+        <li><a href="#about" onclick="setActive(this)">About</a></li>
+        <li><a href="#research" onclick="setActive(this)">Research</a></li>
+        <li><a href="#publications" onclick="setActive(this)">Publications</a></li>
+        <li><a href="#teaching" onclick="setActive(this)">Teaching</a></li>
+        <li><a href="#cv" onclick="setActive(this)">CV</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <main class="container">
+    <!-- Home/Header -->
+    <section id="home">
+      <header class="header">
+        <div class="header-image">
+          <img src="https://via.placeholder.com/200/2c5aa0/ffffff?text=ML" alt="Mingyu Luo">
+        </div>
+        <div class="header-content">
+          <h1 class="name">Mingyu Luo (罗明宇)</h1>
+          <p class="title">Postdoctoral Researcher</p>
+          <p class="affiliation">Department of Ecology and Evolutionary Biology<br>University of California, Los Angeles</p>
+          <div class="badges">
+            <a href="https://scholar.google.com/citations?user=pWcroHoAAAAJ&hl=en" target="_blank" rel="noopener">
+              <span>🎓</span> Google Scholar
+            </a>
+            <a href="https://www.researchgate.net/profile/Mingyu-Luo-4?ev=hdr_xprf" target="_blank" rel="noopener">
+              <span>📊</span> ResearchGate
+            </a>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- About -->
     <section class="section" id="about">
       <h2>About</h2>
       <p>
-        I am a <strong>postdoc </strong> at the <em>Department of Ecology and Evolutioanry Biology</em>, UCLA.
-        My work focuses on theory of ecosystem stability, coarse-graining of ecological models, temporal dynamics of ecological systems, and other topics in theoretical and statistical ecology. I am fortunate to be advised by Dr. Chuliang Song.
+        I am a <strong>postdoctoral researcher</strong> at the <em>Department of Ecology and Evolutionary Biology</em>, UCLA.
+        My work focuses on the theory of ecosystem stability, coarse-graining of ecological models, temporal dynamics of ecological systems, 
+        and other topics in theoretical and statistical ecology. I am fortunate to be advised by <a href="https://www.clsong.com" target="_blank" rel="noopener">Dr. Chuliang Song</a>.
+      </p>
+      <p>
+        I received my Ph.D. in Ecology from Peking University in 2024, where I worked with <a href="https://scholar.pku.edu.cn/spwang" target="_blank" rel="noopener">Prof. Shaopeng Wang</a>. 
+        My academic journey began with a B.S. in Pure and Applied Mathematics from Peking University (2019), which provided me with a strong quantitative foundation. 
+        This interdisciplinary training—combining rigorous mathematical background with ecological theory—has enabled me to develop novel analytical 
+        frameworks for understanding complex ecological phenomena and to bridge theoretical advances with empirical applications.
+      </p>
+      <p>
+        My research employs diverse mathematical and statistical approaches including spectral analysis of population fluctuations, 
+        Bayesian parameterization of metacommunity models, and analytical derivation of coexistence criteria. I have developed 
+        size-constrained feeding-niche models, temperature-based biomass accumulation models, and frameworks for analyzing energy 
+        transfer efficiency in trophic cascades. Through international collaborations with researchers across diverse ecological fields—including 
+        food web ecology, metacommunity dynamics, forest ecology, climate change biology, and biodiversity theory—I integrate theoretical 
+        advances with empirical data from long-term ecological studies to address fundamental questions about biodiversity persistence 
+        and ecosystem functioning in our changing world.
       </p>
     </section>
 
-    <section class="section" id="publications">
-      <h2>Selected Publications</h2>
-      <!-- Tip: for China audiences, avoid Google Scholar/ResearchGate redirects; link to DOI or self-hosted PDFs. -->
+    <!-- Education & Experience -->
+    <section class="section" id="experience">
+      <h2>Education & Experience</h2>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2024 - Present</div>
+        <div class="timeline-content">
+          <h3>Postdoctoral Researcher</h3>
+          <p class="institution">University of California, Los Angeles (UCLA)</p>
+          <p class="details">Department of Ecology and Evolutionary Biology • Advisor: <a href="https://www.clsong.com" target="_blank" rel="noopener">Dr. Chuliang Song</a></p>
+        </div>
+      </div>
 
-      <div class="pub">
-        <div class="pub-title">Short time series obscure compensatory dynamics in ecological communities</div>
-        <div class="pub-venue">Nature Ecology & Evolution, 2025</div>
-        <a href="#">https://doi.org/10.1038/s41559-025-02757-w</a>
+      <div class="timeline-item">
+        <div class="timeline-date">2019 - 2024</div>
+        <div class="timeline-content">
+          <h3>Ph.D. in Ecology</h3>
+          <p class="institution">Peking University</p>
+          <p class="details">College of Urban and Environmental Sciences, Institute of Ecology • Advisor: <a href="https://scholar.pku.edu.cn/spwang" target="_blank" rel="noopener">Prof. Shaopeng Wang</a></p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2015 - 2019</div>
+        <div class="timeline-content">
+          <h3>B.S. in Mathematics</h3>
+          <p class="institution">Peking University</p>
+          <p class="details">School of Mathematical Sciences</p>
+        </div>
       </div>
     </section>
 
+    <!-- Research -->
+    <section class="section" id="research">
+      <h2>Research Areas</h2>
+      <div class="research-grid">
+        <div class="research-card">
+          <h3>Temporal Dynamics</h3>
+          <p>How time series length affects our ability to detect compensatory dynamics and understand ecosystem stability patterns across different timescales</p>
+        </div>
+        <div class="research-card">
+          <h3>Species Coexistence</h3>
+          <p>Mathematical criteria for multispecies persistence in fragmented landscapes, using long-term datasets to parameterize metacommunity models</p>
+        </div>
+        <div class="research-card">
+          <h3>Food Web Structure</h3>
+          <p>Body size constraints and energy transfer efficiency in aquatic vs terrestrial ecosystems, and their effects on trophic cascades</p>
+        </div>
+        <div class="research-card">
+          <h3>Metacommunity Theory</h3>
+          <p>Effects of dispersal on spatial synchrony and population stability, bridging metapopulation and coexistence theories</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section" id="publications">
+      <h2>Selected Publications</h2>
+      
+      <div class="pub">
+        <div class="pub-title">Short time series obscure compensatory dynamics in ecological communities</div>
+        <div class="pub-authors"><strong>Mingyu Luo</strong>, Lauren M. Hallett, Daniel C. Reuman, Lauren G. Shoemaker, Lei Zhao, Lin Jiang, Michel Loreau, Peter B. Reich, David Tilman, Shaopeng Wang*</div>
+        <div class="pub-venue">Nature Ecology & Evolution, 2025</div>
+        <a href="https://doi.org/10.1038/s41559-025-02757-w" target="_blank" rel="noopener">View Paper</a>
+        <span style="margin: 0 0.5rem; color: var(--text-light);">•</span>
+        <a href="https://doi.org/10.1038/s41559-025-02778-5" target="_blank" rel="noopener" style="color: var(--secondary-color);">Research Briefing</a>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">A size-constrained feeding-niche model distinguishes predation patterns between aquatic and terrestrial food webs</div>
+        <div class="pub-authors">Jingyi Li<sup>#</sup>, <strong>Mingyu Luo</strong><sup>#</sup>, Shaopeng Wang*, Benoit Gauzens, Myriam R. Hirt, Benjamin Rosenbaum, Ulrich Brose (<sup>#</sup>co-first authors)</div>
+        <div class="pub-venue">Ecology Letters, 2023</div>
+        <a href="https://doi.org/10.1111/ele.14134" target="_blank" rel="noopener">View Paper</a>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Multispecies coexistence in fragmented landscapes</div>
+        <div class="pub-authors"><strong>Mingyu Luo</strong>, Shaopeng Wang*, Serguei Saavedra, Dieter Ebert, Florian Altermatt</div>
+        <div class="pub-venue">Proceedings of the National Academy of Sciences, 2022</div>
+        <a href="https://doi.org/10.1073/pnas.2201503119" target="_blank" rel="noopener">View Paper</a>
+        <span style="margin: 0 0.5rem; color: var(--text-light);">•</span>
+        <a href="https://doi.org/10.3410/f.742308712.793596246" target="_blank" rel="noopener" style="color: var(--secondary-color); font-style: italic;" title="Formerly Faculty Opinions/F1000Prime">H1 Connect (formerly F1000) Recommended</a>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">The effects of dispersal on spatial synchrony in metapopulations differ by timescale</div>
+        <div class="pub-authors"><strong>Mingyu Luo</strong>, Daniel C. Reuman, Lauren M. Hallett, Lauren G. Shoemaker, Lei Zhao, Max C. N. Castorani, Joan C. Dudney, Laureano A. Gherardi, Andrew L. Rypel, Lawrence W. Sheppard, Jonathan A. Walter, Shaopeng Wang*</div>
+        <div class="pub-venue">Oikos, 2021</div>
+        <a href="https://doi.org/10.1111/oik.08298" target="_blank" rel="noopener">View Paper</a>
+      </div>
+
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">*Corresponding author | See <a href="https://scholar.google.com/citations?user=pWcroHoAAAAJ&hl=en" target="_blank">Google Scholar</a> for complete publication list</p>
+    </section>
+
+    <!-- Teaching -->
     <section class="section" id="teaching">
       <h2>Teaching</h2>
-      <ul class="list">
-        <li>TA, Theoretical Ecology — Fall 2019 <a href="#">(syllabus)</a></li>
-        <li>TA, Ecological Statistics — Spring 2020 <a href="#">(syllabus)</a></li>
+      <ul class="teaching-list">
+        <li>
+          <div class="course-info">
+            <span class="course-name">Teaching Assistant, Theoretical Ecology</span>
+            <span class="course-term">Fall 2019</span>
+          </div>
+          <div class="course-details">Peking University • Instructor: Prof. Shaopeng Wang</div>
+        </li>
+        <li>
+          <div class="course-info">
+            <span class="course-name">Teaching Assistant, Ecological Statistics</span>
+            <span class="course-term">Spring 2020</span>
+          </div>
+          <div class="course-details">Peking University • Instructor: Prof. Shaopeng Wang</div>
+        </li>
       </ul>
     </section>
 
-  
-
+    <!-- CV -->
     <section class="section" id="cv">
-      <h2>CV</h2>
-      <!-- Place your CV at /assets/cv.pdf and link to it -->
-      <p><a href="assets/cv.pdf">Download my CV (PDF)</a></p>
+      <h2>Curriculum Vitae</h2>
+      <p>For a complete list of publications, presentations, honors, and professional activities:</p>
+      <a href="assets/cv.pdf" class="cv-link" download>Download Full CV</a>
     </section>
-
-  
-
-    <footer class="footer">
-      <div>© 2025 Your Name · Last updated 2025-08-14</div>
-      <!-- Optional analytics: use Umami/Matomo (self-hosted) instead of Google Analytics for China. -->
-    </footer>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>© 2025 Mingyu Luo · UCLA Department of Ecology and Evolutionary Biology</div>
+  </footer>
+
+  <script>
+    // Toggle mobile navigation
+    function toggleNav() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    // Set active navigation link
+    function setActive(link) {
+      // Remove active class from all links
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.remove('active');
+      });
+      // Add active class to clicked link
+      link.classList.add('active');
+      // Close mobile menu if open
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.remove('active');
+    }
+
+    // Update active nav link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll('.nav-links a').forEach(a => {
+            a.classList.remove('active');
+          });
+          const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    });
+
+    // Set initial active state
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstLink = document.querySelector('.nav-links a');
+      if (firstLink) {
+        firstLink.classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>
