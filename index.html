@@ -4,29 +4,32 @@
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ec143837-1859-4c93-97fc-acc501771926"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mingyu Luo - UCLA Postdoctoral Researcher | Theoretical Ecology & Mathematical Biology</title>
-  <meta name="description" content="Mingyu Luo - Postdoctoral researcher at UCLA Department of Ecology and Evolutionary Biology. Research in theoretical ecology, mathematical modeling, ecosystem stability, species coexistence, and biodiversity. Published in Nature Ecology & Evolution, PNAS. PhD from Peking University.">
-  <meta name="keywords" content="Mingyu Luo, 罗明宇, UCLA postdoc, UCLA ecology, theoretical ecology, mathematical ecology, mathematical biology, ecosystem stability, biodiversity theory, species coexistence, population dynamics, food web ecology, metacommunity, complex systems, spectral analysis, frequency domain analysis, random matrix theory, Bayesian statistics, ecological modeling, coarse graining, temporal dynamics, spatial synchrony, ecological networks, Nature Ecology & Evolution, PNAS, Proceedings of the National Academy of Sciences, Ecology Letters, Peking University, PKU ecology, Shaopeng Wang, Chuliang Song, postdoctoral researcher, ecology postdoc, mathematical models ecology, population fluctuations, community ecology, stability complexity, biodiversity ecosystem functioning, BEF, compensatory dynamics, fragmented landscapes, Daphnia, predator prey, allometric scaling, trophic cascades, climate change ecology, forest ecology, grassland biodiversity, California ecology, Los Angeles, Chinese ecologist, quantitative ecology, computational ecology, ecological theory, statistical ecology">
+  <meta name="color-scheme" content="light dark">
+  <title>Mingyu Luo | Theoretical Ecology | UCLA</title>
+  <meta name="description" content="Mingyu Luo, postdoctoral researcher in theoretical ecology at UCLA. Ecosystem stability, species coexistence, food webs, and the temporal dynamics of ecological communities.">
+  <meta name="keywords" content="Mingyu Luo, 罗明宇, theoretical ecology, mathematical ecology, ecosystem stability, species coexistence, food webs, metacommunity, spectral analysis, random matrix theory, UCLA, Peking University">
   <meta name="author" content="Mingyu Luo">
   <meta name="robots" content="index, follow">
-  
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mingyu Luo">
   <meta property="og:url" content="https://lmysidious.github.io/mingyu-luo.github.io/">
-  <meta property="og:title" content="Mingyu Luo - UCLA Postdoctoral Researcher in Theoretical Ecology">
-  <meta property="og:description" content="Mathematical and statistical approaches to understanding ecosystem stability, biodiversity, and species coexistence">
+  <meta property="og:title" content="Mingyu Luo | Theoretical Ecology | UCLA">
+  <meta property="og:description" content="Mathematical and statistical approaches to ecosystem stability, biodiversity, and species coexistence.">
   <meta property="og:image" content="https://lmysidious.github.io/mingyu-luo.github.io/assets/headshot.jpg">
-  
+  <meta property="og:image:alt" content="Portrait of Mingyu Luo">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mingyu Luo - UCLA Ecology">
-  <meta name="twitter:description" content="Postdoc at UCLA studying theoretical ecology and ecosystem dynamics">
+  <meta name="twitter:title" content="Mingyu Luo | Theoretical Ecology | UCLA">
+  <meta name="twitter:description" content="Postdoc at UCLA studying theoretical ecology and ecosystem dynamics.">
   <meta name="twitter:image" content="https://lmysidious.github.io/mingyu-luo.github.io/assets/headshot.jpg">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://lmysidious.github.io/mingyu-luo.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  
+
   <!-- Structured Data for Google -->
   <script type="application/ld+json">
   {
@@ -58,7 +61,7 @@
     ],
     "knowsAbout": [
       "Theoretical Ecology",
-      "Mathematical Ecology", 
+      "Mathematical Ecology",
       "Ecosystem Stability",
       "Species Coexistence",
       "Biodiversity Theory",
@@ -68,22 +71,47 @@
       "Ecological Modeling",
       "Statistical Ecology"
     ],
-    "description": "Postdoctoral researcher at UCLA specializing in mathematical and theoretical ecology, with focus on ecosystem stability, species coexistence, and biodiversity patterns."
+    "description": "Postdoctoral researcher at UCLA specializing in mathematical and theoretical ecology, with a focus on ecosystem stability, species coexistence, and biodiversity patterns."
   }
   </script>
-  
+
   <style>
-    /* Modern Academic Website Styles */
     :root {
       --primary-color: #2c5aa0;
+      --on-primary: #ffffff;
       --secondary-color: #536878;
       --text-dark: #1a1a1a;
-      --text-light: #666;
+      --text-light: #5f6368;
       --bg-primary: #ffffff;
       --bg-secondary: #f8f9fa;
       --border-color: #e0e0e0;
       --link-hover: #1e3a5f;
-      --max-width: 900px;
+      --nav-bg: rgba(248, 249, 250, 0.95);
+      --diagram-bg: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      --diagram-border: rgba(44, 90, 160, 0.12);
+      --connector: rgba(44, 90, 160, 0.28);
+      --shadow: rgba(0, 0, 0, 0.12);
+      --nav-height: 60px;
+      --max-width: 840px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-color: #6aaee0;
+        --on-primary: #0f1e2b;
+        --secondary-color: #a3b5c2;
+        --text-dark: #e4e4e4;
+        --text-light: #a0a0a0;
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #262626;
+        --border-color: #3a3a3a;
+        --link-hover: #9fcbee;
+        --nav-bg: rgba(38, 38, 38, 0.95);
+        --diagram-bg: linear-gradient(135deg, #262626 0%, #1f1f1f 100%);
+        --diagram-border: rgba(106, 174, 224, 0.22);
+        --connector: rgba(106, 174, 224, 0.4);
+        --shadow: rgba(0, 0, 0, 0.45);
+      }
     }
 
     * {
@@ -94,6 +122,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-height) + 8px);
     }
 
     body {
@@ -102,7 +131,30 @@
       color: var(--text-dark);
       background: var(--bg-primary);
       font-size: 16px;
-      padding-top: 60px; /* Account for fixed nav */
+      padding-top: var(--nav-height);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -100px;
+      z-index: 2000;
+      padding: 0.6rem 1rem;
+      background: var(--primary-color);
+      color: var(--on-primary);
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 0.6rem;
     }
 
     .container {
@@ -111,17 +163,17 @@
       padding: 2rem 1.5rem;
     }
 
-    /* Navigation Bar */
+    /* Navigation */
     nav {
-      background: var(--bg-secondary);
-      border-bottom: 2px solid var(--border-color);
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1000;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border-color);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-      background: rgba(248, 249, 250, 0.95);
     }
 
     .nav-container {
@@ -131,7 +183,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 60px;
+      height: var(--nav-height);
     }
 
     .nav-brand {
@@ -143,16 +195,16 @@
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.75rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-dark);
       text-decoration: none;
-      position: relative;
-      transition: color 0.3s ease;
+      transition: color 0.2s ease;
       font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     .nav-links a:hover,
@@ -160,14 +212,29 @@
       color: var(--primary-color);
     }
 
-    /* Header Section */
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      color: var(--text-dark);
+    }
+
+    /* Header */
     #home {
       padding-top: 2rem;
     }
 
     .header {
       display: flex;
-      gap: 3rem;
+      gap: 2.5rem;
       align-items: center;
       padding: 3rem 0;
       margin-bottom: 2rem;
@@ -178,11 +245,12 @@
     }
 
     .header img {
+      display: block;
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 24px var(--shadow);
     }
 
     .header-content {
@@ -192,7 +260,7 @@
     .name {
       font-size: 2.5rem;
       font-weight: 700;
-      color: var(--text-dark);
+      line-height: 1.2;
       margin-bottom: 0.5rem;
       letter-spacing: -0.5px;
     }
@@ -201,7 +269,6 @@
       color: var(--text-light);
       margin-bottom: 0.5rem;
       font-size: 1.1rem;
-      line-height: 1.6;
     }
 
     .affiliation {
@@ -211,21 +278,20 @@
       font-size: 1.05rem;
     }
 
-    /* Contact Badges */
     .badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.6rem;
     }
 
     .badges a {
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.85rem;
       background: var(--bg-secondary);
       color: var(--text-dark);
       text-decoration: none;
       border-radius: 25px;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      transition: background 0.2s ease, color 0.2s ease;
       border: 1px solid var(--border-color);
       display: flex;
       align-items: center;
@@ -234,9 +300,15 @@
 
     .badges a:hover {
       background: var(--primary-color);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.2);
+      border-color: var(--primary-color);
+      color: var(--on-primary);
+    }
+
+    .office {
+      margin-top: 1rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      font-style: normal;
     }
 
     /* Sections */
@@ -254,80 +326,104 @@
       color: var(--primary-color);
       margin-bottom: 1.5rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--bg-secondary);
+      border-bottom: 2px solid var(--border-color);
       font-weight: 600;
     }
 
     .section p {
       margin-bottom: 1rem;
       line-height: 1.8;
-      color: var(--text-dark);
       font-size: 1.05rem;
     }
 
-    .section p a {
+    .section a {
       color: var(--primary-color);
       text-decoration: none;
-      transition: all 0.3s ease;
     }
 
-    .section p a:hover {
+    .section a:hover {
       text-decoration: underline;
       color: var(--link-hover);
     }
 
-    /* Research Philosophy Diagram - New Addition */
-    .philosophy-section {
-      margin: 2rem 0 3rem 0;
+    .subheading {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
     }
 
+    .subheading:first-of-type {
+      margin-top: 1.5rem;
+    }
+
+    /* Research philosophy diagram */
     .philosophy-diagram {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      margin: 2rem 0 3rem;
+      background: var(--diagram-bg);
+      border: 1px solid var(--diagram-border);
       border-radius: 20px;
       padding: 3rem 2rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid rgba(44, 90, 160, 0.1);
     }
 
     .diagram-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
       position: relative;
-      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    /* Connector runs through the centres of the three icons (icon height 100px) */
+    .diagram-content::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 16%;
+      right: 16%;
+      height: 2px;
+      margin-top: -1px;
+      background: var(--connector);
+    }
+
+    .pillar,
+    .flow-arrow {
+      position: relative;
+      z-index: 1;
     }
 
     .pillar {
-      flex: 1;
-      position: relative;
       text-align: center;
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    .pillar:nth-child(1) { animation-delay: 0.2s; }
+    .pillar:nth-child(3) { animation-delay: 0.4s; }
+    .pillar:nth-child(5) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .pillar-icon {
       width: 100px;
       height: 100px;
       margin: 0 auto 15px;
-      background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2.5rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
+      color: #fff;
+      box-shadow: 0 4px 15px var(--shadow);
     }
 
-    .pillar:hover .pillar-icon {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
+    .nature-icon  { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); }
+    .math-icon    { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); }
+    .insight-icon { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); }
 
     .pillar-title {
       font-size: 1.1rem;
-      color: var(--text-dark);
       font-weight: 600;
       margin-bottom: 8px;
     }
@@ -338,123 +434,27 @@
       line-height: 1.5;
     }
 
-    /* Pillar Colors */
-    .nature-icon {
-      background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%) !important;
-      color: white;
-    }
-
-    .math-icon {
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
-      color: white;
-    }
-
-    .insight-icon {
-      background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%) !important;
-      color: white;
-    }
-
-    /* Connection Elements */
-    .connection {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(44, 90, 160, 0.2) 25%, 
-        rgba(44, 90, 160, 0.2) 75%, 
-        transparent 100%);
-      z-index: 1;
-      transform: translateY(-50%);
-    }
-
+    /* Arrowhead drawn in CSS: the ▶ glyph is rendered as an emoji on some phones */
     .flow-arrow {
-      position: absolute;
-      top: 50%;
-      color: rgba(44, 90, 160, 0.5);
-      font-size: 1.5rem;
-      transform: translateY(-50%);
-      z-index: 1;
-      animation: flow 2s ease-in-out infinite;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      color: var(--primary-color);
     }
 
-    .flow-arrow.left {
-      left: 32%;
+    .flow-arrow::before {
+      content: "";
+      border-left: 11px solid currentColor;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
     }
 
-    .flow-arrow.right {
-      right: 32%;
-    }
-
-    @keyframes flow {
-      0%, 100% { 
-        opacity: 0.3; 
-        transform: translateY(-50%) translateX(0); 
-      }
-      50% { 
-        opacity: 0.8; 
-        transform: translateY(-50%) translateX(5px); 
-      }
-    }
-
-    /* Background Elements */
-    .bg-circle {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(44, 90, 160, 0.03) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .bg-circle-1 {
-      width: 250px;
-      height: 250px;
-      top: -80px;
-      left: -80px;
-    }
-
-    .bg-circle-2 {
-      width: 350px;
-      height: 350px;
-      bottom: -120px;
-      right: -120px;
-    }
-
-    /* Subtle animation */
-    .pillar {
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
-    }
-
-    .pillar:nth-child(1) { animation-delay: 0.2s; }
-    .pillar:nth-child(2) { animation-delay: 0.4s; }
-    .pillar:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Research Grid */
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
+    /* Research cards */
     .research-card {
       background: var(--bg-secondary);
       padding: 1.5rem;
       border-radius: 8px;
       border-left: 4px solid var(--primary-color);
-      transition: all 0.3s ease;
       margin-bottom: 2rem;
     }
 
@@ -462,22 +462,33 @@
       margin-bottom: 0;
     }
 
-    .research-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transform: translateY(-2px);
+    .research-card h3 {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      margin-bottom: 0.6rem;
     }
 
-    .research-card h3 {
-      color: var(--text-dark);
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    .theme-years {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text-light);
+      white-space: nowrap;
+      margin-left: 0.25rem;
     }
 
     .research-card p {
       color: var(--text-light);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 0.97rem;
+      line-height: 1.7;
       margin: 0;
+    }
+
+    .research-card.collab {
+      border-left-color: var(--secondary-color);
+    }
+
+    .research-card.collab h3 {
+      color: var(--secondary-color);
     }
 
     /* Publications */
@@ -486,20 +497,14 @@
       padding: 1.2rem;
       border-radius: 8px;
       margin-bottom: 1.2rem;
-      transition: all 0.3s ease;
       border-left: 4px solid var(--primary-color);
-    }
-
-    .pub:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transform: translateX(5px);
     }
 
     .pub-title {
       font-weight: 600;
-      color: var(--text-dark);
       margin-bottom: 0.4rem;
       font-size: 1.1rem;
+      line-height: 1.4;
     }
 
     .pub-authors {
@@ -515,7 +520,6 @@
 
     .pub-authors sup {
       font-size: 0.8rem;
-      vertical-align: super;
     }
 
     .pub-venue {
@@ -525,23 +529,31 @@
       font-size: 0.95rem;
     }
 
-    .pub a {
-      color: var(--primary-color);
-      text-decoration: none;
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.3rem 1.2rem;
+    }
+
+    .pub-links a {
       font-size: 0.9rem;
       font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
     }
 
-    .pub a:hover {
-      text-decoration: underline;
-    }
-
-    .pub a::after {
-      content: "↗";
+    .pub-links a::after {
+      content: " ↗";
       font-size: 0.8rem;
+    }
+
+    .pub-links a.secondary {
+      color: var(--secondary-color);
+    }
+
+    .section .pub-note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
     }
 
     /* Teaching */
@@ -562,23 +574,30 @@
     .course-info {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      gap: 1rem;
       margin-bottom: 0.3rem;
     }
 
     .course-name {
       font-weight: 500;
-      color: var(--text-dark);
     }
 
     .course-term {
       color: var(--text-light);
       font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     .course-details {
       color: var(--text-light);
       font-size: 0.9rem;
+    }
+
+    .course-topics {
+      display: block;
+      font-size: 0.85rem;
+      margin-top: 0.15rem;
     }
 
     /* Timeline */
@@ -588,7 +607,6 @@
       margin-bottom: 2rem;
       padding-bottom: 2rem;
       border-bottom: 1px solid var(--border-color);
-      position: relative;
     }
 
     .timeline-item:last-child {
@@ -607,19 +625,16 @@
 
     .timeline-content {
       flex: 1;
-      position: relative;
     }
 
     .timeline-content h3 {
       font-size: 1.2rem;
       font-weight: 600;
-      color: var(--text-dark);
       margin-bottom: 0.5rem;
     }
 
     .timeline-content .institution {
       font-size: 1.05rem;
-      color: var(--text-dark);
       margin-bottom: 0.3rem;
       font-weight: 500;
     }
@@ -630,69 +645,39 @@
       margin: 0;
     }
 
-    .timeline-content .details a {
-      color: var(--primary-color);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .timeline-content .details a:hover {
-      text-decoration: underline;
-      color: var(--link-hover);
-    }
-
-    /* CV Button */
-    .cv-link {
+    /* CV button */
+    .section a.cv-link {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       padding: 0.8rem 1.5rem;
       background: var(--primary-color);
-      color: white;
+      color: var(--on-primary);
       text-decoration: none;
       border-radius: 6px;
       font-weight: 500;
-      transition: all 0.3s ease;
+      transition: background 0.2s ease;
       margin-top: 1rem;
     }
 
-    .cv-link:hover {
+    .section a.cv-link:hover {
       background: var(--link-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
-    }
-
-    .cv-link::before {
-      content: "📄";
-      font-size: 1.2rem;
+      color: var(--on-primary);
+      text-decoration: none;
     }
 
     /* Footer */
     .footer {
       margin-top: 4rem;
-      padding: 2rem 0;
+      padding: 2rem 1.5rem;
       text-align: center;
       color: var(--text-light);
       font-size: 0.9rem;
       background: var(--bg-secondary);
     }
 
-    /* Mobile Menu Toggle */
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-dark);
-    }
-
-    /* Responsive Design */
+    /* Responsive */
     @media (max-width: 768px) {
-      body {
-        padding-top: 60px;
-      }
-
       .nav-toggle {
         display: block;
       }
@@ -700,21 +685,22 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: var(--nav-height);
         left: 0;
         right: 0;
-        background: rgba(248, 249, 250, 0.98);
+        background: var(--bg-secondary);
         flex-direction: column;
         padding: 1rem 1.5rem;
-        border-bottom: 2px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
         gap: 0.5rem;
       }
 
-      .nav-links.active {
+      .nav-links.open {
         display: flex;
       }
 
       .nav-links a {
+        display: block;
         padding: 0.5rem 0;
       }
 
@@ -741,19 +727,23 @@
         justify-content: center;
       }
 
-      /* Philosophy diagram mobile */
       .philosophy-diagram {
         padding: 2rem 1rem;
       }
 
       .diagram-content {
-        flex-direction: column;
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
       }
 
-      .connection,
-      .flow-arrow {
+      .diagram-content::before {
         display: none;
+      }
+
+      .flow-arrow {
+        height: auto;
+        justify-content: center;
+        transform: rotate(90deg);
       }
 
       .pillar-icon {
@@ -768,10 +758,6 @@
 
       .pillar-description {
         font-size: 0.85rem;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
       }
 
       .timeline-item {
@@ -789,66 +775,57 @@
         align-items: flex-start;
         gap: 0.3rem;
       }
+
+      .course-term {
+        white-space: normal;
+      }
     }
 
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text-dark: #e0e0e0;
-        --text-light: #999;
-        --bg-primary: #1a1a1a;
-        --bg-secondary: #2a2a2a;
-        --border-color: #3a3a3a;
-        --primary-color: #5a9fd4;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
 
-      nav {
-        background: rgba(42, 42, 42, 0.95);
+      .pillar {
+        animation: none;
       }
 
-      .nav-links {
-        background: rgba(42, 42, 42, 0.98);
+      * {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      nav,
+      .skip-link {
+        display: none;
       }
 
-      .badges a {
-        background: var(--bg-secondary);
-        color: var(--text-dark);
-        border-color: var(--border-color);
+      body {
+        padding-top: 0;
       }
 
-      .research-card,
-      .pub {
-        background: var(--bg-secondary);
-      }
-
-      .header img {
-        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      }
-
-      .philosophy-diagram {
-        background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-        border: 1px solid rgba(90, 159, 212, 0.2);
-      }
-
-      .pillar-icon {
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      .section {
+        padding: 1.5rem 0;
       }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
   <!-- Navigation -->
-  <nav>
+  <nav aria-label="Main">
     <div class="nav-container">
       <a href="#home" class="nav-brand">Mingyu Luo</a>
-      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" onclick="setActive(this)">Home</a></li>
-        <li><a href="#about" onclick="setActive(this)">About</a></li>
-        <li><a href="#research" onclick="setActive(this)">Research</a></li>
-        <li><a href="#publications" onclick="setActive(this)">Publications</a></li>
-        <li><a href="#teaching" onclick="setActive(this)">Teaching & Outreach</a></li>
-        <li><a href="#cv" onclick="setActive(this)">CV</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching &amp; Outreach</a></li>
+        <li><a href="#cv">CV</a></li>
       </ul>
     </div>
   </nav>
@@ -858,27 +835,30 @@
     <section id="home">
       <header class="header">
         <div class="header-image">
-          <img src="assets/headshot.jpg" alt="Mingyu Luo">
+          <img src="assets/headshot.jpg" alt="Portrait of Mingyu Luo" width="200" height="200">
         </div>
         <div class="header-content">
           <h1 class="name">Mingyu Luo</h1>
           <p class="title">Postdoctoral Researcher</p>
           <p class="affiliation">Department of Ecology and Evolutionary Biology<br>University of California, Los Angeles</p>
           <div class="badges">
+            <a href="mailto:mingyuluoeeb@ucla.edu">
+              <span aria-hidden="true">✉️</span> Email
+            </a>
             <a href="https://scholar.google.com/citations?user=pWcroHoAAAAJ&hl=en" target="_blank" rel="noopener">
-              <span>🎓</span> Google Scholar
+              <span aria-hidden="true">🎓</span> Google Scholar
             </a>
             <a href="https://www.researchgate.net/profile/Mingyu-Luo-4?ev=hdr_xprf" target="_blank" rel="noopener">
-              <span>📊</span> ResearchGate
+              <span aria-hidden="true">📊</span> ResearchGate
             </a>
             <a href="https://orcid.org/0000-0002-2975-5218" target="_blank" rel="noopener">
-              <span>🆔</span> ORCID
+              <span aria-hidden="true">🆔</span> ORCID
             </a>
           </div>
-          <div style="margin-top: 1rem; color: var(--text-light); font-size: 0.95rem;">
-            <span>📍 Office: La Kretz Botany Building, Floor 2<br>
-            618 Charles E. Young Drive South, Los Angeles, CA 90095</span>
-          </div>
+          <address class="office">
+            <span aria-hidden="true">📍</span> Office: La Kretz Botany Building, Floor 2<br>
+            618 Charles E. Young Drive South, Los Angeles, CA 90095
+          </address>
         </div>
       </header>
     </section>
@@ -887,25 +867,27 @@
     <section class="section" id="about">
       <h2>About</h2>
       <p>
-        I am a <strong>postdoctoral researcher</strong> at the <em>Department of Ecology and Evolutionary Biology</em>, UCLA. My work focuses on the theory of ecosystem stability, coarse-graining of ecological models, temporal dynamics of ecological systems, and other topics in theoretical and statistical ecology. I am fortunate to be advised by <a href="https://www.clsong.com" target="_blank" rel="noopener">Dr. Chuliang Song</a>.
+        I am a <strong>postdoctoral researcher</strong> in the Department of Ecology and Evolutionary Biology at UCLA, where I am fortunate to be advised by <a href="https://www.clsong.com" target="_blank" rel="noopener">Dr. Chuliang Song</a>. I study the theory of ecosystem stability, the coarse-graining of ecological models, the temporal dynamics of ecological systems, and related questions in theoretical and statistical ecology.
       </p>
       <p>
-        I received my Ph.D. in Ecology from Peking University in 2024, where I worked with <a href="https://scholar.pku.edu.cn/spwang" target="_blank" rel="noopener">Prof. Shaopeng Wang</a>. My academic journey began with a B.S. in Pure and Applied Mathematics from Peking University (2019), which provided me with a strong quantitative foundation. This interdisciplinary training—combining a rigorous mathematical and statistical background with ecological theory—has enabled me to develop novel analytical frameworks for understanding complex ecological phenomena and to bridge theoretical advances with empirical applications.
+        I received my Ph.D. in Ecology from Peking University in 2024, advised by <a href="https://scholar.pku.edu.cn/spwang" target="_blank" rel="noopener">Prof. Shaopeng Wang</a>, after a B.S. in Mathematics there in 2019. That combination of mathematical and statistical training with ecological theory shapes how I work: I build analytical frameworks for ecological questions, then test them against data.
       </p>
       <p>
-        My research employs diverse quantitative approaches to understand the structure, organization, and persistence of ecological systems. Through international collaborations with researchers across diverse ecological fields—including food web ecology, metacommunity dynamics, forest ecology, climate change biology, and biodiversity theory—I integrate theoretical advances with empirical data from long-term ecological studies to address fundamental questions about biodiversity persistence and ecosystem functioning in our changing world.
+        My research draws on a range of quantitative tools, including spectral analysis, random matrix theory, and Bayesian statistics, to understand how ecological systems are structured and how they persist. Much of it is collaborative. Working with colleagues in food web ecology, metacommunity dynamics, forest ecology, climate change biology, and biodiversity theory, I connect theory to long-term empirical data to ask how biodiversity is maintained and how ecosystems function in a changing world.
       </p>
+      <!--
       <p>
-<!--        Outside of research, I enjoy classical music—particularly Baroque works and Italian opera—and am an amateur bass-baritone singer. I also explore traditional Chinese verbal and musical arts. These examples reflect my broader passion for diverse disciplines across the mathematical, natural, and social sciences as well as various artistic traditions, echoing the interdisciplinary curiosity that drives my ecological research. --!>
+        Outside of research, I enjoy classical music—particularly Baroque works and Italian opera—and am an amateur bass-baritone singer. I also explore traditional Chinese verbal and musical arts. These examples reflect my broader passion for diverse disciplines across the mathematical, natural, and social sciences as well as various artistic traditions, echoing the interdisciplinary curiosity that drives my ecological research.
       </p>
+      -->
     </section>
 
-    <!-- Education & Experience -->
-    <section class="section" id="experience">
-      <h2>Education & Experience</h2>
-      
+    <!-- Education & Experience (highlights "About" in the nav) -->
+    <section class="section" id="experience" data-nav="about">
+      <h2>Education &amp; Experience</h2>
+
       <div class="timeline-item">
-        <div class="timeline-date">2024 - Present</div>
+        <div class="timeline-date">2024 – Present</div>
         <div class="timeline-content">
           <h3>Postdoctoral Researcher</h3>
           <p class="institution">University of California, Los Angeles (UCLA)</p>
@@ -914,7 +896,7 @@
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-date">2019 - 2024</div>
+        <div class="timeline-date">2019 – 2024</div>
         <div class="timeline-content">
           <h3>Ph.D. in Ecology</h3>
           <p class="institution">Peking University</p>
@@ -923,7 +905,7 @@
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-date">2015 - 2019</div>
+        <div class="timeline-date">2015 – 2019</div>
         <div class="timeline-content">
           <h3>B.S. in Mathematics</h3>
           <p class="institution">Peking University</p>
@@ -935,178 +917,171 @@
     <!-- Research -->
     <section class="section" id="research">
       <h2>Research Programs</h2>
-      
-      <!-- Research Philosophy Figure -->
-      <div class="philosophy-section">
-        <div class="philosophy-diagram">
-          <!-- Background decorative elements -->
-          <div class="bg-circle bg-circle-1"></div>
-          <div class="bg-circle bg-circle-2"></div>
-          
-          <!-- Connection line -->
-          <div class="connection"></div>
-          <div class="flow-arrow left">▶</div>
-          <div class="flow-arrow right">▶</div>
-          
-          <!-- Main content -->
-          <div class="diagram-content">
-            <div class="pillar">
-              <div class="pillar-icon nature-icon">
-                🌿
-              </div>
-              <div class="pillar-title">Complex Ecosystems</div>
-              <div class="pillar-description">
-                Thousands of species interacting in ways we're just beginning to understand
-              </div>
-            </div>
 
-            <div class="pillar">
-              <div class="pillar-icon math-icon">
-                ∑
-              </div>
-              <div class="pillar-title">Mathematical Tools</div>
-              <div class="pillar-description">
-                Using equations to find patterns and data to verify them
-              </div>
+      <!-- Research philosophy figure -->
+      <div class="philosophy-diagram">
+        <div class="diagram-content">
+          <div class="pillar">
+            <div class="pillar-icon nature-icon" aria-hidden="true">🌿</div>
+            <div class="pillar-title">Complex Ecosystems</div>
+            <div class="pillar-description">
+              Thousands of species interacting in ways we're just beginning to understand
             </div>
+          </div>
 
-            <div class="pillar">
-              <div class="pillar-icon insight-icon">
-                💡
-              </div>
-              <div class="pillar-title">Nature's Hidden Rules</div>
-              <div class="pillar-description">
-                Universal patterns that help us predict and protect ecosystems
-              </div>
+          <div class="flow-arrow" aria-hidden="true"></div>
+
+          <div class="pillar">
+            <div class="pillar-icon math-icon" aria-hidden="true">∑</div>
+            <div class="pillar-title">Mathematical Tools</div>
+            <div class="pillar-description">
+              Using equations to find patterns and data to verify them
+            </div>
+          </div>
+
+          <div class="flow-arrow" aria-hidden="true"></div>
+
+          <div class="pillar">
+            <div class="pillar-icon insight-icon" aria-hidden="true">💡</div>
+            <div class="pillar-title">Nature's Hidden Rules</div>
+            <div class="pillar-description">
+              Universal patterns that help us predict and protect ecosystems
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="research-card">
-        <h3>Theme 1: Frequency-domain analysis of population fluctuations (2019-)</h3>
-        <p>Frequency-domain analysis, or spectral analysis, is a classic approach in time series analysis. My doctoral research expanded its application to ecological dynamics, first examining how dispersal affects spatial synchrony across different timescales (Luo et al. 2021 Oikos). Building on this foundation, I extended the approach to competitive communities and validated theoretical predictions using grassland biodiversity experiments (Luo et al. 2025 NEE). Crucially, in this work, I derived a direct mathematical formula showing how frequency-domain patterns influence statistical outcomes in finite-length time series through weighted averaging. These works advance the frequency-domain theory of stochastic population dynamics and demonstrate that the timescale of ecological observations can cause qualitative shifts in outcomes—not merely increase uncertainty—with profound implications for interpreting ecological data. </p>
-       <!-- 
-        <p>Currently, I am developing ideas to integrate theories of ecological stability via spectral approaches (in progress).</p> 
+        <h3>Theme 1: Frequency-domain analysis of population fluctuations <span class="theme-years">2019–present</span></h3>
+        <p>Frequency-domain (spectral) analysis is a classic tool in time series analysis. My doctoral research extended it to ecological dynamics, first by examining how dispersal affects spatial synchrony at different timescales (Luo et al. 2021, <em>Oikos</em>), then by turning to competitive communities, where I tested theoretical predictions against grassland biodiversity experiments (<a href="https://doi.org/10.1038/s41559-025-02757-w" target="_blank" rel="noopener">Luo et al. 2025, <em>Nature Ecology &amp; Evolution</em></a>). In that paper I derived a formula showing how frequency-domain patterns shape the statistics computed from finite-length time series, through weighted averaging. Together, these studies advance the frequency-domain theory of stochastic population dynamics and show that the timescale of observation can change ecological conclusions qualitatively, not merely add uncertainty, which matters for how ecological time series are interpreted.</p>
+        <!--
+        <p>Currently, I am developing ideas to integrate theories of ecological stability via spectral approaches (in progress).</p>
         -->
       </div>
 
       <div class="research-card">
-        <h3>Theme 2: Species coexistence in structured communities (2020-2022)</h3>
-        <p>Metapopulation theory provides elegant mathematical criteria for population persistence in spatially fragmented landscapes. When extended to two-species metacommunities, this framework yields the famous competition-colonization trade-off. I advanced this theory by first fitting a long-term dataset of three competing Daphnia species using Bayesian approaches, then deriving mathematical criteria for multispecies coexistence in fragmented landscapes (Luo et al. 2022 PNAS). This work uniquely integrates metacommunity theory, species coexistence theory, structural stability analysis, and Bayesian statistics.</p>
+        <h3>Theme 2: Species coexistence in structured communities <span class="theme-years">2020–2022</span></h3>
+        <p>Metapopulation theory gives simple mathematical criteria for when a population persists in a fragmented landscape; extended to two competing species, it yields the well-known competition–colonization trade-off. I took this further in two steps: fitting a long-term dataset of three competing <em>Daphnia</em> species with Bayesian methods, then deriving mathematical criteria for multispecies coexistence in fragmented landscapes (<a href="https://doi.org/10.1073/pnas.2201503119" target="_blank" rel="noopener">Luo et al. 2022, <em>PNAS</em></a>). The work brings together metacommunity theory, species coexistence theory, structural stability analysis, and Bayesian statistics.</p>
       </div>
 
       <div class="research-card">
-        <h3>Theme 3: Statistical model of food web structure (2021-2022)</h3>
-        <p>Food web structure fundamentally shapes ecosystem dynamics, with body size serving as a key organizing principle for predator-prey interactions. The allometric scaling of foraging relationships provides a quantitative framework for understanding how energy flows through ecosystems. I developed a flexible probabilistic model for predicting foraging links that incorporates both biotic factors (predator and prey body sizes) and abiotic drivers (such as temperature). Fitting this model to a global food web dataset using Bayesian approaches and modern scalable MCMC algorithms, we revealed how foraging patterns—including optimal prey-predator size ratios and feeding ranges—systematically vary with predator size and temperature across aquatic and terrestrial ecosystems (Li, Luo et al. 2023 Ecology Letters).</p>
+        <h3>Theme 3: Statistical model of food web structure <span class="theme-years">2021–2022</span></h3>
+        <p>Food web structure shapes ecosystem dynamics, and body size is one of its main organizing principles: the allometric scaling of feeding relationships offers a quantitative handle on how energy flows through ecosystems. I developed a flexible probabilistic model that predicts foraging links from biotic factors (predator and prey body sizes) and abiotic drivers such as temperature. Fitting it to a global food web dataset with Bayesian methods and scalable MCMC algorithms, we showed how foraging patterns, including optimal prey–predator size ratios and feeding ranges, vary systematically with predator size and temperature across aquatic and terrestrial ecosystems (<a href="https://doi.org/10.1111/ele.14134" target="_blank" rel="noopener">Li, Luo et al. 2023, <em>Ecology Letters</em></a>).</p>
       </div>
 
       <div class="research-card">
-        <h3>Theme 4: Ecosystem complexity, resilience, invariability, and productivity (2023-)</h3>
-        <p>The complexity-stability debate represents one of ecology's most fundamental questions. Research has revealed that ecosystem complexity has opposing effects on two key stability measures: asymptotic resilience and temporal invariability. As the focus of my doctoral thesis, I used random matrix theory to derive analytical predictions for temporal invariability in complex ecosystems, providing a parallel to May's famous work on complexity-resilience relationships. Moving beyond classical random community matrix models, I am investigating the relationship between asymptotic resilience and temporal invariability under more realistic ecological scenarios. These results will help resolve the longstanding complexity-stability debate and clarify the relationships among different stability measures (Doctoral thesis; Luo et al. under review).</p>
-      <!--
+        <h3>Theme 4: Ecosystem complexity, resilience, invariability, and productivity <span class="theme-years">2023–present</span></h3>
+        <p>Whether complexity stabilizes or destabilizes ecosystems is one of ecology's oldest open questions. Part of the difficulty is that complexity has opposing effects on two key stability measures: asymptotic resilience and temporal invariability. In my doctoral thesis I used random matrix theory to derive analytical predictions for temporal invariability in complex ecosystems, a counterpart to May's classic result on complexity and resilience. I am now moving beyond classical random community matrices to study how resilience and invariability relate under more realistic ecological scenarios, with the aim of clarifying how different stability measures fit together (doctoral thesis; Luo et al., under review).</p>
+        <!--
         <p>Additionally, I am exploring theoretical connections between feasibility and stability in large random ecosystems, as well as correlations among entries of the community (Jacobian) matrix at equilibrium. This work aims to uncover fundamental relationships between ecosystem properties and identify the boundaries of classical theoretical frameworks, potentially revealing new organizing principles for complex ecological systems (in progress).</p>
         -->
       </div>
 
       <!--
       <div class="research-card">
-        <h3>Theme 5: Theory of biodiversity and ecosystem functioning (2023-)</h3>
+        <h3>Theme 5: Theory of biodiversity and ecosystem functioning <span class="theme-years">2023–present</span></h3>
         <p>Biodiversity-ecosystem functioning (BEF) theory predicts that diversity enhances both productivity and stability (through portfolio and insurance effects). Drawing inspiration from mean-variance trade-offs in financial portfolio theory, I demonstrated that complex ecological communities may exhibit an analogous productivity–invariability trade-off. I have shown how this phenomenon emerges from species heterogeneity and am currently testing these predictions with empirical data (in progress).</p>
         <p>Currently, I'm also developing a new framework to integrate the effects of species traits (here, monoculture productivity) and their variation in the BEF relationship (in progress).</p>
       </div>
 
       <div class="research-card">
-        <h3>Theme 6: Coarse graining of ecological models (2024-)</h3>
+        <h3>Theme 6: Coarse graining of ecological models <span class="theme-years">2024–present</span></h3>
         <p>Complex ecological systems often contain dynamics across multiple scales, from individual interactions to ecosystem-level patterns. Coarse graining—a physics approach for systematically reducing model complexity while preserving essential dynamics—offers a powerful framework to bridge these scales and identify emergent properties. I have developed a theoretical framework for coarse graining ecological models. For locally linearized systems, I derived elegant mathematical criteria for exact coarse graining and proposed methods to quantify deviation from exact reducibility. I presented this work as a contributed oral presentation at the 2025 ESA meeting in Baltimore. Currently, I am organizing these theoretical results and applying them to realistic ecological models and empirical datasets (in preparation).</p>
       </div>
 
       <div class="research-card">
-        <h3>Theme 7: Theory of ecosystem sensitivity (2025-)</h3>
+        <h3>Theme 7: Theory of ecosystem sensitivity <span class="theme-years">2025–present</span></h3>
         <p>Sensitivity measures how ecosystem properties respond to environmental change and is closely connected to ecosystem resistance. Building on well-developed sensitivity theory, I further investigate its geometric properties and their connections to other stability measures in simple and complex systems (in preparation).</p>
       </div>
-
       -->
 
-      <div class="research-card" style="border-left-color: var(--secondary-color); background: linear-gradient(to right, rgba(83, 104, 120, 0.05), transparent);">
-        <h3 style="color: var(--secondary-color);">Collaborative Research</h3>
-        <p>I contribute mathematical and statistical expertise to diverse collaborative projects, often leading the mathematical modeling, numerical simulation, and statistical analysis components. My collaborations span remarkably diverse areas of ecology—from forest biomass accumulation and climate impacts to aquatic food web structure and Daphnia metacommunity—reflecting my commitment to applying quantitative approaches wherever they can advance ecological understanding. I actively seek collaborative opportunities in ecology, computational biology, and related fields. Whether building on my established research areas or venturing into uncharted territory, I'm particularly excited about collaborations that could open entirely new frontiers in ecological research, pushing the boundaries of what theoretical ecology can achieve.</p>
+      <div class="research-card collab">
+        <h3>Collaborative Research</h3>
+        <p>I contribute mathematical and statistical expertise to collaborative projects, often leading the modeling, numerical simulation, and statistical analysis. These projects range from forest biomass accumulation and climate impacts to aquatic food web structure and <em>Daphnia</em> metacommunities. I welcome new collaborations in ecology, computational biology, and related fields, whether they build on the themes above or head somewhere entirely new. If you have a question where theory might help, please <a href="mailto:mingyuluoeeb@ucla.edu">get in touch</a>.</p>
       </div>
     </section>
 
     <!-- Publications -->
     <section class="section" id="publications">
       <h2>Selected Publications</h2>
-      
+
       <div class="pub">
         <div class="pub-title">Short time series obscure compensatory dynamics in ecological communities</div>
         <div class="pub-authors"><strong>Mingyu Luo</strong>, Lauren M. Hallett, Daniel C. Reuman, Lauren G. Shoemaker, Lei Zhao, Lin Jiang, Michel Loreau, Peter B. Reich, David Tilman, Shaopeng Wang*</div>
-        <div class="pub-venue">Nature Ecology & Evolution, 2025</div>
-        <a href="https://doi.org/10.1038/s41559-025-02757-w" target="_blank" rel="noopener">View Paper</a>
-        <span style="margin: 0 0.5rem; color: var(--text-light);">•</span>
-        <a href="https://doi.org/10.1038/s41559-025-02778-5" target="_blank" rel="noopener" style="color: var(--secondary-color);">Research Briefing</a>
+        <div class="pub-venue">Nature Ecology &amp; Evolution, 2025</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1038/s41559-025-02757-w" target="_blank" rel="noopener" aria-label="View paper: Short time series obscure compensatory dynamics in ecological communities">View Paper</a>
+          <a class="secondary" href="https://doi.org/10.1038/s41559-025-02778-5" target="_blank" rel="noopener">Research Briefing</a>
+        </div>
       </div>
 
       <div class="pub">
         <div class="pub-title">A size-constrained feeding-niche model distinguishes predation patterns between aquatic and terrestrial food webs</div>
         <div class="pub-authors">Jingyi Li<sup>#</sup>, <strong>Mingyu Luo</strong><sup>#</sup>, Shaopeng Wang*, Benoit Gauzens, Myriam R. Hirt, Benjamin Rosenbaum, Ulrich Brose</div>
         <div class="pub-venue">Ecology Letters, 2023</div>
-        <a href="https://doi.org/10.1111/ele.14134" target="_blank" rel="noopener">View Paper</a>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1111/ele.14134" target="_blank" rel="noopener" aria-label="View paper: A size-constrained feeding-niche model distinguishes predation patterns between aquatic and terrestrial food webs">View Paper</a>
+        </div>
       </div>
 
       <div class="pub">
         <div class="pub-title">Multispecies coexistence in fragmented landscapes</div>
         <div class="pub-authors"><strong>Mingyu Luo</strong>, Shaopeng Wang*, Serguei Saavedra, Dieter Ebert, Florian Altermatt</div>
         <div class="pub-venue">Proceedings of the National Academy of Sciences, 2022</div>
-        <a href="https://doi.org/10.1073/pnas.2201503119" target="_blank" rel="noopener">View Paper</a>
-        <span style="margin: 0 0.5rem; color: var(--text-light);">•</span>
-        <a href="https://doi.org/10.3410/f.742308712.793596246" target="_blank" rel="noopener" style="color: var(--secondary-color); font-style: italic;" title="Formerly Faculty Opinions/F1000Prime">H1 Connect (formerly F1000) Recommended</a>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1073/pnas.2201503119" target="_blank" rel="noopener" aria-label="View paper: Multispecies coexistence in fragmented landscapes">View Paper</a>
+          <a class="secondary" href="https://doi.org/10.3410/f.742308712.793596246" target="_blank" rel="noopener" title="Formerly Faculty Opinions/F1000Prime">H1 Connect (formerly F1000) Recommended</a>
+        </div>
       </div>
 
-      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">*Corresponding author | <sup>#</sup>Co-first authors | See <a href="https://scholar.google.com/citations?user=pWcroHoAAAAJ&hl=en" target="_blank">Google Scholar</a> for complete publication list</p>
+      <p class="pub-note">*Corresponding author | <sup>#</sup>Co-first authors | See <a href="https://scholar.google.com/citations?user=pWcroHoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> for the complete publication list</p>
     </section>
 
     <!-- Teaching & Outreach -->
     <section class="section" id="teaching">
-      <h2>Teaching & Outreach</h2>
-      
-      <h3 style="font-size: 1.3rem; color: var(--text-dark); margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Teaching</h3>
+      <h2>Teaching &amp; Outreach</h2>
+
+      <h3 class="subheading">Teaching</h3>
       <ul class="teaching-list">
         <li>
           <div class="course-info">
             <span class="course-name">Teaching Assistant, Ecological Statistics</span>
             <span class="course-term">Spring 2020</span>
           </div>
-          <div class="course-details">Peking University • Instructor: Prof. Shaopeng Wang • Designed lecture materials and problem sets<br>
-          <span style="color: var(--text-light); font-size: 0.85rem;">Topics: Basic probability theory and statistical inference, ANOVA, linear models and extensions, structural equation models, basic Bayesian statistics</span></div>
+          <div class="course-details">Peking University • Instructor: Prof. Shaopeng Wang • Designed lecture materials and problem sets
+            <span class="course-topics">Topics: Basic probability theory and statistical inference, ANOVA, linear models and extensions, structural equation models, basic Bayesian statistics</span>
+          </div>
         </li>
         <li>
           <div class="course-info">
             <span class="course-name">Teaching Assistant, Theoretical Ecology</span>
             <span class="course-term">Fall 2019</span>
           </div>
-          <div class="course-details">Peking University • Instructor: Prof. Shaopeng Wang • Designed lecture materials and problem sets<br>
-          <span style="color: var(--text-light); font-size: 0.85rem;">Topics: Classic population dynamics models, food web structure and dynamics, metapopulation and metacommunity models, ecosystem stability theory</span></div>
+          <div class="course-details">Peking University • Instructor: Prof. Shaopeng Wang • Designed lecture materials and problem sets
+            <span class="course-topics">Topics: Classic population dynamics models, food web structure and dynamics, metapopulation and metacommunity models, ecosystem stability theory</span>
+          </div>
         </li>
       </ul>
-      
-      <h3 style="font-size: 1.3rem; color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Outreach</h3>
+
+      <h3 class="subheading">Outreach</h3>
       <ul class="teaching-list">
         <li>
           <div class="course-info">
             <span class="course-name">Mathematical Olympiad Instructor</span>
             <span class="course-term">Winter 2016, Summer 2017, Summer 2019</span>
           </div>
-          <div class="course-details">The Experimental High School Attached to Beijing Normal University (alma mater)<br>
-          <span style="color: var(--text-light); font-size: 0.85rem;">Advanced problem-solving in elementary algebra, Euclidean geometry, elementary number theory, and combinatorics</span></div>
+          <div class="course-details">The Experimental High School Attached to Beijing Normal University (alma mater)
+            <span class="course-topics">Advanced problem-solving in elementary algebra, Euclidean geometry, elementary number theory, and combinatorics</span>
+          </div>
         </li>
         <li>
           <div class="course-info">
             <span class="course-name">Student Recruitment Volunteer</span>
-            <span class="course-term">2016 - 2024</span>
+            <span class="course-term">2016 – 2024</span>
           </div>
-          <div class="course-details">Peking University Admissions Office<br>
-          <span style="color: var(--text-light); font-size: 0.85rem;">Advised prospective students and parents on academic programs and university life</span></div>
+          <div class="course-details">Peking University Admissions Office
+            <span class="course-topics">Advised prospective students and parents on academic programs and university life</span>
+          </div>
         </li>
       </ul>
     </section>
@@ -1115,64 +1090,79 @@
     <section class="section" id="cv">
       <h2>Curriculum Vitae</h2>
       <p>For a complete list of publications, presentations, honors, and professional activities:</p>
-      <a href="assets/cv.pdf" class="cv-link" target="_blank" rel="noopener">View Full CV</a>
+      <a href="assets/cv.pdf" class="cv-link" target="_blank" rel="noopener"><span aria-hidden="true">📄</span> View full CV (PDF)</a>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div>© 2025 Mingyu Luo · UCLA Department of Ecology and Evolutionary Biology</div>
+    <div>© 2026 Mingyu Luo · UCLA Department of Ecology and Evolutionary Biology</div>
   </footer>
 
   <script>
-    // Toggle mobile navigation
-    function toggleNav() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var navLinks = document.getElementById('navLinks');
+      var links = Array.prototype.slice.call(navLinks.querySelectorAll('a'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
 
-    // Set active navigation link
-    function setActive(link) {
-      // Remove active class from all links
-      document.querySelectorAll('.nav-links a').forEach(a => {
-        a.classList.remove('active');
-      });
-      // Add active class to clicked link
-      link.classList.add('active');
-      // Close mobile menu if open
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.remove('active');
-    }
-
-    // Update active nav link on scroll
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.pageYOffset;
-
-      sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          document.querySelectorAll('.nav-links a').forEach(a => {
-            a.classList.remove('active');
-          });
-          const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-          if (activeLink) {
-            activeLink.classList.add('active');
-          }
-        }
-      });
-    });
-
-    // Set initial active state
-    document.addEventListener('DOMContentLoaded', () => {
-      const firstLink = document.querySelector('.nav-links a');
-      if (firstLink) {
-        firstLink.classList.add('active');
+      // Mobile menu
+      function closeMenu() {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       }
-    });
+
+      toggle.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+
+      links.forEach(function (a) {
+        a.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      // Highlight the nav link for the section currently in view.
+      // A section without its own nav link can point at one with data-nav="...".
+      function setActive(id) {
+        links.forEach(function (a) {
+          var on = a.getAttribute('href') === '#' + id;
+          a.classList.toggle('active', on);
+          if (on) {
+            a.setAttribute('aria-current', 'true');
+          } else {
+            a.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      var ticking = false;
+
+      function update() {
+        ticking = false;
+        var current = sections[0];
+        sections.forEach(function (s) {
+          if (s.getBoundingClientRect().top <= 100) current = s;
+        });
+        // The last section is short, so its top may never reach the threshold
+        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        if (atBottom) current = sections[sections.length - 1];
+        setActive(current.getAttribute('data-nav') || current.id);
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(update);
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', update);
+      update();
+    })();
   </script>
 </body>
 </html>
